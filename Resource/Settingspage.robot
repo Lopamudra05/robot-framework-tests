@@ -1,7 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-
-
+Resource    Logoutpage.robot
 
 *** Variables ***
 ${SETTINGS_LINK}    //button[.//*[name()='svg']//*[name()='path' and contains(@d,'M19.14 12.')]]
@@ -17,6 +16,9 @@ Navigate To Settings Page
     Element Should Be Visible    ${SETTINGS_PAGE_HEADER}
     Sleep   3s
     # Add more steps to verify settings page features as needed.
+    # Logout From Application
+    # Close Browser
+
 
 
 

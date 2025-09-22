@@ -11,6 +11,10 @@ ${AI_SEARCH_BTN}        //div[normalize-space()='AI Search']
 ${MICRO_PHONE_ARROW}        (//button[contains(@class,'page_microPhone')]//*[name()='svg'])[2]
 ${ANSWER_CONTENT_SUMMARY}        //div[contains(@class,"AnswerContent_summary")]
 ${ANSWER_CONTENT_CONTAINER}        //div[contains(@class,"AnswerContent_addonContainer")]
+${BTN_TODAY}          //button[normalize-space()='Today']
+${BTN_THIS_WEEK}     //button[normalize-space()='This Week']
+${BTN_LAST_WEEK}     //button[normalize-space()='Last Week']
+${BTN_OLDER}         //button[normalize-space()='Older']
 
 
 *** Keywords ***
@@ -29,6 +33,23 @@ Go To Home And Start New Chat
     ${summary_text}=    Get Text    ${ANSWER_CONTENT_SUMMARY}
     Sleep   9s
     Log    Answer content summary: ${summary_text}
+    Click Element  ${BTN_TODAY}              #new btn 
+    Wait Until Element Is Visible    ${BTN_TODAY}    20s
+    Sleep   3s
+    scroll Element Into View    ${BTN_THIS_WEEK}
+    Click Element  ${BTN_THIS_WEEK}      #new btn
+    Wait Until Element Is Visible    ${BTN_THIS_WEEK}    20s
+    Sleep   3s
+    scroll Element Into View    ${BTN_LAST_WEEK}
+    Click Element  ${BTN_LAST_WEEK}      #new btn
+    Wait Until Element Is Visible    ${BTN_LAST_WEEK}    20s
+    Sleep   3s
+    scroll Element Into View    ${BTN_OLDER}
+    Click Element  ${BTN_OLDER}      #new btn
+    Wait Until Element Is Visible    ${BTN_OLDER}    20s
+    Sleep   3s
+    
+    
 
 
 

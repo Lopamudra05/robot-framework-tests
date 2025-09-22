@@ -2,7 +2,8 @@
 Library    SeleniumLibrary
 Resource    ../Resource/comonpage.robot
 Resource    ../Resource/SchedulePage.robot
-Suite Setup   Suite Setup
+Test Setup   Suite Setup
+Test Teardown   Suite Teardown
 
 *** Test Cases ***
 Verify Schedule Creation With Tesla Agent

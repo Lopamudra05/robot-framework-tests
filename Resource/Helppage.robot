@@ -1,6 +1,8 @@
 *** settings ***
 Library    SeleniumLibrary
 
+Resource    Logoutpage.robot
+
 
 *** Variables ***
 ${HELP_LINK}      //nav[contains(@class,'Navbar_navbar__')]//div[6]//button[1]    

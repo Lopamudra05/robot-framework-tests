@@ -17,9 +17,5 @@ Login to Application
     Input Text    ${password_textbox}    ${password}
     Click Element    ${login_button}
     Sleep    10s
-logout from application
-    Click Element    //a[text()="Logout"]
-    Sleep    5s
-    Close Browser
 
 

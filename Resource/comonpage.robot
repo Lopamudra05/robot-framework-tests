@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Resource    ./loginpage.robot
 Resource    ./Schedulepage.robot
+Resource    ./Logoutpage.robot
 *** Variables ***
 ${BROWSER}    Chrome
 ${URL}    https://dev.supplywhyai.net/
@@ -15,5 +16,7 @@ open ChromeBrowser
 Suite Setup
     Open ChromeBrowser
     Login to Application    ${username}    ${password}
-    
+Suite Teardown
+    Logout From Application
+    Close Browser    
 

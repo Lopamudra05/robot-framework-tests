@@ -1,99 +1,257 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-16T21:28:48.185437" rpa="false" schemaversion="5">
-<suite id="s1" name="TC 005 Settingspage" source="/Users/rokkun_mac/Desktop/Supplywhy.ai/Test case/TC_005_Settingspage.robot">
+<robot generator="Robot 7.3.2 (Python 3.13.5 on darwin)" generated="2025-09-22T14:36:39.803976" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 002 Homepage" source="/Users/rokkun_mac/Desktop/Supplywhy.ai/Test case/TC_002_Homepage.robot">
+<test id="s1-t1" name="Start New Chat And Validate Answer" line="9">
 <kw name="Suite Setup" owner="comonpage" type="SETUP">
 <kw name="open ChromeBrowser" owner="comonpage">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-09-16T21:28:48.268209" level="INFO">Opening browser 'Chrome' to base url 'https://dev.supplywhyai.net/'.</msg>
+<msg time="2025-09-22T14:36:39.883985" level="INFO">Opening browser 'Chrome' to base url 'https://dev.supplywhyai.net/'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-09-16T21:28:48.268123" elapsed="5.873290"/>
+<status status="PASS" start="2025-09-22T14:36:39.883900" elapsed="3.767843"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-09-16T21:28:54.141704" elapsed="0.338571"/>
+<status status="PASS" start="2025-09-22T14:36:43.653281" elapsed="0.734790"/>
 </kw>
-<status status="PASS" start="2025-09-16T21:28:48.267913" elapsed="6.212649"/>
+<status status="PASS" start="2025-09-22T14:36:39.883695" elapsed="4.504561"/>
 </kw>
 <kw name="Login to Application" owner="loginpage">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-16T21:28:54.481643" level="INFO">Typing text 'lopamudra.mohanty@supplywhy.ai' into text field '//input[@name="username"]'.</msg>
+<msg time="2025-09-22T14:36:44.389356" level="INFO">Typing text 'lopamudra.mohanty@supplywhy.ai' into text field '//input[@name="username"]'.</msg>
 <arg>${Username_textbox}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-16T21:28:54.481250" elapsed="0.092199"/>
+<status status="PASS" start="2025-09-22T14:36:44.388941" elapsed="0.096245"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-09-16T21:28:54.573734" level="INFO">Typing text 'Lopamudra@123654' into text field '//input[@name="password"]'.</msg>
+<msg time="2025-09-22T14:36:44.485436" level="INFO">Typing text 'Lopamudra@123654' into text field '//input[@name="password"]'.</msg>
 <arg>${password_textbox}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-16T21:28:54.573570" elapsed="0.024615"/>
+<status status="PASS" start="2025-09-22T14:36:44.485291" elapsed="0.025718"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-16T21:28:54.598454" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<msg time="2025-09-22T14:36:44.511241" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
 <arg>${login_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-16T21:28:54.598311" elapsed="0.024104"/>
+<status status="PASS" start="2025-09-22T14:36:44.511119" elapsed="0.020511"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-16T21:29:04.624169" level="INFO">Slept 10 seconds.</msg>
+<msg time="2025-09-22T14:36:54.532702" level="INFO">Slept 10 seconds.</msg>
 <arg>10s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-16T21:28:54.622540" elapsed="10.001968"/>
+<status status="PASS" start="2025-09-22T14:36:44.531730" elapsed="10.001206"/>
 </kw>
 <arg>${username}</arg>
 <arg>${password}</arg>
-<status status="PASS" start="2025-09-16T21:28:54.480914" elapsed="10.143865"/>
+<status status="PASS" start="2025-09-22T14:36:44.388539" elapsed="10.144594"/>
 </kw>
-<status status="PASS" start="2025-09-16T21:28:48.267810" elapsed="16.357136"/>
+<status status="PASS" start="2025-09-22T14:36:39.883579" elapsed="14.649632"/>
 </kw>
-<test id="s1-t1" name="Verify Settings Page Functionality" line="10">
-<kw name="Navigate To Settings Page" owner="Settingspage">
+<kw name="Go To Home And Start New Chat" owner="Homepage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:36:54.534413" level="INFO">Clicking element '//div[contains(@class,"Navbar_linkContainer_")][2]'.</msg>
+<arg>${HOME_PAGE_LINK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:36:54.534200" elapsed="0.039315"/>
+</kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SETTINGS_LINK}</arg>
+<arg>${NEW_CHAT_BUTTON}</arg>
 <arg>30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-16T21:29:04.627344" elapsed="0.022847"/>
+<status status="PASS" start="2025-09-22T14:36:54.573647" elapsed="1.527595"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-09-16T21:29:04.650697" level="INFO">Clicking element '//button[.//*[name()='svg']//*[name()='path' and contains(@d,'M19.14 12.')]]'.</msg>
-<arg>${SETTINGS_LINK}</arg>
+<msg time="2025-09-22T14:36:56.101468" level="INFO">Clicking element '//button[normalize-space()='New chat']'.</msg>
+<arg>${NEW_CHAT_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-09-16T21:29:04.650422" elapsed="0.032765"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-16T21:29:07.684993" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-16T21:29:04.683333" elapsed="3.001988"/>
+<status status="PASS" start="2025-09-22T14:36:56.101355" elapsed="0.019757"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${SETTINGS_PAGE_HEADER}</arg>
-<arg>30s</arg>
+<arg>${SEARCH_BAR}</arg>
+<arg>20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-16T21:29:07.685787" elapsed="0.016053"/>
-</kw>
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-09-16T21:29:07.710987" level="INFO">Element '//div[@class='styles_container__F__Ws']' is displayed.</msg>
-<arg>${SETTINGS_PAGE_HEADER}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-09-16T21:29:07.702066" elapsed="0.008989"/>
+<status status="PASS" start="2025-09-22T14:36:56.121205" elapsed="1.067433"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-09-16T21:29:10.713941" level="INFO">Slept 3 seconds.</msg>
+<msg time="2025-09-22T14:37:00.189632" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-09-16T21:29:07.711181" elapsed="3.003082"/>
+<status status="PASS" start="2025-09-22T14:36:57.188962" elapsed="3.000987"/>
 </kw>
-<doc>This keyword navigates to the Settings page from the Dashboard.</doc>
-<status status="PASS" start="2025-09-16T21:29:04.626797" elapsed="6.087711"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:37:00.191072" level="INFO">Typing text 'What is the Tesla supplywhy forecast at an 8 week lag for May 2025?' into text field '//textarea[@placeholder="Press Cmd+K (Ctrl+K) to focus and ask JENAE your question"]'.</msg>
+<arg>${SEARCH_BAR}</arg>
+<arg>${search_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:37:00.190446" elapsed="0.991811"/>
 </kw>
-<doc>Verify user can navigate to Settings Page and access settings options.</doc>
-<status status="PASS" start="2025-09-16T21:29:04.625272" elapsed="6.089749"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-22T14:37:04.184398" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-22T14:37:01.182364" elapsed="3.002337"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:37:04.185561" level="INFO">Clicking element '(//button[contains(@class,'page_microPhone')]//*[name()='svg'])[2]'.</msg>
+<arg>${MICRO_PHONE_ARROW}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:37:04.185052" elapsed="0.079288"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-22T14:37:07.267292" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-22T14:37:04.264496" elapsed="3.003079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ANSWER_CONTENT_SUMMARY}</arg>
+<arg>90s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-22T14:37:07.267943" elapsed="21.869492"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:37:29.146342" level="INFO">${summary_text} = Tesla Supply Forecast Data Unavailable
+No forecast data could be retrieve</msg>
+<var>${summary_text}</var>
+<arg>${ANSWER_CONTENT_SUMMARY}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:37:29.137542" elapsed="0.008819"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-22T14:37:38.147454" level="INFO">Slept 9 seconds.</msg>
+<arg>9s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-22T14:37:29.146425" elapsed="9.001327"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-09-22T14:37:38.148779" level="INFO">Answer content summary: Tesla Supply Forecast Data Unavailable
+No forecast data could be retrieve</msg>
+<arg>Answer content summary: ${summary_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-09-22T14:37:38.148293" elapsed="0.000590"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:37:38.149520" level="INFO">Clicking element '//button[normalize-space()='Today']'.</msg>
+<arg>${BTN_TODAY}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:37:38.149118" elapsed="0.069388"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_TODAY}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-22T14:37:38.218631" elapsed="0.005457"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-22T14:37:41.225468" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-22T14:37:38.224178" elapsed="3.001375"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BTN_THIS_WEEK}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-09-22T14:37:41.225658" elapsed="0.274182"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:37:41.500217" level="INFO">Clicking element '//button[normalize-space()='This Week']'.</msg>
+<arg>${BTN_THIS_WEEK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:37:41.500011" elapsed="0.050029"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_THIS_WEEK}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-22T14:37:41.550166" elapsed="0.004840"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-22T14:37:44.557708" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-22T14:37:41.555071" elapsed="3.002961"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BTN_LAST_WEEK}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-09-22T14:37:44.558522" elapsed="0.295299"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:37:44.854665" level="INFO">Clicking element '//button[normalize-space()='Last Week']'.</msg>
+<arg>${BTN_LAST_WEEK}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:37:44.854232" elapsed="0.064731"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_LAST_WEEK}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-22T14:37:44.919095" elapsed="0.011613"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-22T14:37:47.932412" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-22T14:37:44.930902" elapsed="3.001837"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${BTN_OLDER}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-09-22T14:37:47.933219" elapsed="0.301297"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:37:48.235353" level="INFO">Clicking element '//button[normalize-space()='Older']'.</msg>
+<arg>${BTN_OLDER}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:37:48.234923" elapsed="0.074001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BTN_OLDER}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-09-22T14:37:48.309052" elapsed="0.011066"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-22T14:37:51.322966" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-22T14:37:48.320354" elapsed="3.002921"/>
+</kw>
+<arg>What is the Tesla supplywhy forecast at an 8 week lag for May 2025?</arg>
+<status status="PASS" start="2025-09-22T14:36:54.533831" elapsed="56.789700"/>
+</kw>
+<kw name="Suite Teardown" owner="comonpage" type="TEARDOWN">
+<kw name="Logout From Application" owner="Logoutpage">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-09-22T14:37:51.325954" level="INFO">Clicking element '(//nav[contains(@class,'Navbar_navbar')]//button)[last()]'.</msg>
+<arg>${LOGOUT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-09-22T14:37:51.325506" elapsed="0.041218"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-09-22T14:37:53.367348" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-09-22T14:37:51.366832" elapsed="2.000838"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-22T14:37:53.368129" elapsed="0.083843"/>
+</kw>
+<status status="PASS" start="2025-09-22T14:37:51.325077" elapsed="2.126958"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-09-22T14:37:53.452106" elapsed="0.000064"/>
+</kw>
+<status status="PASS" start="2025-09-22T14:37:51.324469" elapsed="2.127722"/>
+</kw>
+<status status="PASS" start="2025-09-22T14:36:39.883319" elapsed="73.568929"/>
 </test>
-<status status="PASS" start="2025-09-16T21:28:48.185849" elapsed="22.530177"/>
+<status status="PASS" start="2025-09-22T14:36:39.804521" elapsed="73.648038"/>
 </suite>
 <statistics>
 <total>
@@ -102,7 +260,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="TC 005 Settingspage" id="s1" pass="1" fail="0" skip="0">TC 005 Settingspage</stat>
+<stat name="TC 002 Homepage" id="s1" pass="1" fail="0" skip="0">TC 002 Homepage</stat>
 </suite>
 </statistics>
 <errors>

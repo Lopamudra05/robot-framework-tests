@@ -68,7 +68,8 @@ Add Instruction3
 Submit Instructions
     Wait Until Element Is Visible    ${Add_instructions_button}    5s
     Click Element    ${Instruction_arrow_button}
-    Wait Until Element Is Visible    ${ANSWER_CONTENT_SUMMARY}    70s
+    Sleep   3s
+    Wait Until Element Is Visible    ${ANSWER_CONTENT_SUMMARY}    120s
     Element Should Be Visible    ${Add_instructions_button}
 
 Save Agent

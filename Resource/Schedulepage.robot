@@ -1,6 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
 
+Resource    Logoutpage.robot
+
 *** Variables ***
 ${SCHEDULE_PAGE_LINK}       //nav[contains(@class,'Navbar_navbar__')]//div[4]//button[1]
 ${CREATE_NEW_SCHEDULE_BTN}      //button[normalize-space()='Create New Schedule']
